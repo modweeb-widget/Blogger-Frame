@@ -14,7 +14,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--contentB);
+  background: var(--mwb-contentB);
   align-items: center;
   justify-content: center;
   z-index: 99999;
@@ -23,7 +23,7 @@
   transition: all 0.8s ease;
 }
 .standalone-page-container.dark-mode .pldW {
-  background: var(--bodyB);
+  background: var(--mwb-bodyB);
 }
 .pldW.e { display: flex; }
 .pldW.h { opacity: 0; visibility: hidden; }
@@ -90,8 +90,8 @@
   max-width: 420px;
   margin: 40px auto;
   padding: 32px 28px;
-  background: var(--contentB);
-  border: 1px solid var(--contentL);
+  background: var(--mwb-contentB);
+  border: 1px solid var(--mwb-contentL);
   border-radius: 12px;
   text-align: center;
   direction: rtl;
@@ -103,11 +103,11 @@
 .welcome-card h1 {
   font-size: 22px;
   font-weight: 600;
-  color: var(--bodyC);
+  color: var(--mwb-bodyC);
   letter-spacing: 0.01em;
 }
 .standalone-page-container.dark-mode .welcome-card h1 {
-  color: var(--white);
+  color: var(--mwb-white);
 }
 
 /* ===== صفحات الأدوات العامة ===== */
@@ -120,21 +120,21 @@
 .tool-page h2 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--bodyC);
+  color: var(--mwb-bodyC);
   margin-bottom: 12px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--contentL);
+  border-bottom: 1px solid var(--mwb-contentL);
 }
 .standalone-page-container.dark-mode .tool-page h2 {
-  color: var(--white);
+  color: var(--mwb-white);
   border-bottom-color: #374151;
 }
 .tool-page p {
   font-size: 15px;
   line-height: 1.8;
-  color: var(--bodyC);
+  color: var(--mwb-bodyC);
   opacity: 0.75;
 }
 .standalone-page-container.dark-mode .tool-page p {
-  color: var(--white);
+  color: var(--mwb-white);
 }
