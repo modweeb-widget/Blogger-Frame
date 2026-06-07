@@ -1,5 +1,5 @@
 /* ===== متغيرات CSS الأساسية - WedweeB Design Framework ===== */
-:root {
+#root {
   /* ألوان المحتوى */
   --contentL: #e5e7eb;
   --contentB: #ffffff;
