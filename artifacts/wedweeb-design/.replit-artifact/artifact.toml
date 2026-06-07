@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "WedweeB Design Framework"
+version = "1.0.0"
+id = "artifacts/wedweeb-design"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24425
+
+[services.development]
+run = "pnpm --filter @workspace/wedweeb-design run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/wedweeb-design", "run", "build" ]
+publicDir = "artifacts/wedweeb-design/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24425"
+BASE_PATH = "/"

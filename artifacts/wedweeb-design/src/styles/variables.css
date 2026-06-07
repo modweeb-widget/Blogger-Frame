@@ -1,0 +1,22 @@
+/* ===== متغيرات CSS الأساسية - WedweeB Design Framework ===== */
+:root {
+  /* ألوان المحتوى */
+  --contentL: #e5e7eb;
+  --contentB: #ffffff;
+
+  /* ألوان الجسم */
+  --bodyB: #111827;
+  --bodyC: #111827;
+
+  /* ألوان الروابط */
+  --headC: #111827;
+  --linkB: #000000;
+  --linkC: #3b82f6;
+
+  /* ألوان عامة */
+  --white: #ffffff;
+
+  /* ألوان الإشعارات */
+  --notifB: #1f2937;
+  --notifC: #6b7280;
+}

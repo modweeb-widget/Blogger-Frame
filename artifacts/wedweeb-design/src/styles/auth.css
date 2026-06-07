@@ -1,0 +1,498 @@
+/* ===== صفحة تسجيل الدخول ===== */
+.lp-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+.lp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.lp-inner {
+  max-width: 330px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transform: translateY(-40px);
+}
+.lp-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--headC);
+  text-decoration: none;
+}
+/* صندوق شعار SVG — صفحة تسجيل الدخول */
+.lp-logo-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 0.1px solid var(--contentL);
+  background: var(--contentB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.standalone-page-container.dark-mode .lp-logo-box {
+  background: var(--bodyB);
+  border-color: #374151;
+}
+.lp-logo-box svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.lp-brand-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--headC);
+}
+.standalone-page-container.dark-mode .lp-brand-text {
+  color: var(--white);
+}
+.lp-card {
+  width: 100%;
+  background: var(--contentB);
+  border-radius: 20px;
+  border: 1px solid var(--contentL);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+.standalone-page-container.dark-mode .lp-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+.lp-card-head {
+  padding: 14px 16px 0;
+  text-align: center;
+}
+.lp-card-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--headC);
+  margin-bottom: 4px;
+}
+.standalone-page-container.dark-mode .lp-card-title {
+  color: var(--white);
+}
+.lp-card-sub {
+  font-size: 12px;
+  color: var(--bodyC);
+  margin: 0;
+}
+.standalone-page-container.dark-mode .lp-card-sub {
+  color: #9ca3af;
+}
+.lp-card-body {
+  padding: 12px 16px 14px;
+}
+.lp-google-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: 1px solid var(--contentL);
+  border-radius: 15px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--bodyC);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.standalone-page-container.dark-mode .lp-google-btn {
+  border-color: #374151;
+  color: var(--white);
+}
+.lp-google-btn:hover {
+  background: var(--contentL);
+}
+.standalone-page-container.dark-mode .lp-google-btn:hover {
+  background: #374151;
+}
+.lp-google-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.lp-terms {
+  font-size: 11px;
+  color: var(--bodyC);
+  text-align: center;
+  line-height: 1.7;
+}
+.standalone-page-container.dark-mode .lp-terms {
+  color: #9ca3af;
+}
+.lp-link {
+  color: var(--linkC);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.lp-link:hover {
+  color: var(--headC);
+}
+
+/* Toast */
+.lp-toast {
+  position: fixed;
+  bottom: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--notifB);
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999999;
+  pointer-events: none;
+}
+.lp-toast-active { opacity: 1; }
+
+/* ===== صفحة إدارة الحساب ===== */
+.ac-wrapper {
+  width: 100%;
+  padding: 14px 20px 20px;
+  direction: rtl;
+}
+.ac-card {
+  max-width: 420px;
+  width: 100%;
+  background: var(--contentB);
+  border-radius: 20px;
+  border: 1px solid var(--contentL);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+  overflow: visible;
+}
+.standalone-page-container.dark-mode .ac-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+.ac-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--contentL);
+}
+.standalone-page-container.dark-mode .ac-card-header {
+  border-bottom-color: #374151;
+}
+.ac-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+/* صندوق شعار SVG — صفحة الحساب */
+.ac-logo-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 0.1px solid var(--contentL);
+  background: var(--contentB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.standalone-page-container.dark-mode .ac-logo-box {
+  background: var(--bodyB);
+  border-color: #374151;
+}
+.ac-logo-box svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ac-brand-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--headC);
+}
+.standalone-page-container.dark-mode .ac-brand-text {
+  color: var(--white);
+}
+.ac-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* زر الإعدادات — دائري مثل زر الثيم */
+.ac-settings-btn {
+  background: none;
+  border: 1px solid var(--contentL);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bodyC);
+  transition: all 0.2s;
+  padding: 0;
+}
+.standalone-page-container.dark-mode .ac-settings-btn {
+  border-color: #374151;
+  color: var(--white);
+}
+.ac-settings-btn:hover {
+  transform: scale(1.05);
+  border-color: var(--linkC);
+}
+.ac-settings-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* لوحة الإعدادات المنبثقة */
+.ac-settings-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--contentB);
+  border-radius: 12px;
+  padding: 12px 12px 4px;
+  border: 1px solid var(--contentL);
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  width: 260px;
+  z-index: 10000;
+  animation: ac-fade-in 0.2s ease;
+  direction: rtl;
+  text-align: right;
+}
+.standalone-page-container.dark-mode .ac-settings-panel {
+  background: #1f2937;
+  border-color: #374151;
+}
+@keyframes ac-fade-in {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ac-label {
+  display: block;
+  font-size: 12px;
+  color: var(--bodyC);
+  margin-bottom: 6px;
+}
+.standalone-page-container.dark-mode .ac-label {
+  color: #9ca3af;
+}
+.ac-label-title {
+  font-size: 12px;
+  color: var(--headC);
+  margin-bottom: 4px;
+}
+.standalone-page-container.dark-mode .ac-label-title {
+  color: var(--white);
+}
+.ac-input {
+  border: 1px solid var(--contentL);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 13px;
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  background: var(--contentB);
+  color: var(--bodyC);
+  display: block;
+}
+.standalone-page-container.dark-mode .ac-input {
+  background: #111827;
+  border-color: #374151;
+  color: var(--white);
+}
+.ac-input-file {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: var(--bodyC);
+}
+.ac-divider {
+  border-top: 1px solid var(--contentL);
+  margin: 8px 0;
+}
+.standalone-page-container.dark-mode .ac-divider {
+  border-color: #374151;
+}
+.ac-save-btn {
+  width: 100%;
+  background: var(--linkB);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  transition: background 0.2s;
+}
+.ac-save-btn:hover { background: #262626; }
+
+/* محتوى البطاقة */
+.ac-card-content {
+  padding: 13px 14px;
+}
+.ac-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.ac-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--contentL);
+}
+.ac-user-info { overflow: hidden; }
+.ac-user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--headC);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.standalone-page-container.dark-mode .ac-user-name { color: var(--white); }
+.ac-user-email {
+  font-size: 12px;
+  color: var(--bodyC);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.standalone-page-container.dark-mode .ac-user-email { color: #9ca3af; }
+.ac-user-join {
+  font-size: 11px;
+  color: var(--bodyC);
+  margin-top: 2px;
+}
+.standalone-page-container.dark-mode .ac-user-join { color: #6b7280; }
+
+/* أزرار الإجراءات */
+.ac-actions-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.ac-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid var(--contentL);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--bodyC);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.standalone-page-container.dark-mode .ac-btn-outline {
+  border-color: #374151;
+  color: #9ca3af;
+}
+.ac-btn-outline:hover {
+  background: var(--contentL);
+}
+.ac-btn-outline svg {
+  width: 13px;
+  height: 13px;
+  color: inherit;
+}
+
+/* الجلسات */
+.ac-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--headC);
+  margin-bottom: 8px;
+}
+.standalone-page-container.dark-mode .ac-section-title { color: var(--white); }
+.ac-sessions { display: flex; flex-direction: column; gap: 6px; }
+.ac-session-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--contentB);
+  border: 1px solid var(--contentL);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.standalone-page-container.dark-mode .ac-session-item {
+  background: #111827;
+  border-color: #374151;
+}
+.ac-session-info { overflow: hidden; flex: 1; }
+.ac-session-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--bodyC);
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.standalone-page-container.dark-mode .ac-session-row { color: #9ca3af; }
+.ac-session-row svg { flex-shrink: 0; opacity: 0.7; }
+.ac-current-badge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 10px;
+  background: var(--linkC);
+  color: #fff;
+  padding: 1px 7px;
+  border-radius: 20px;
+}
+.ac-remove-btn {
+  background: none;
+  border: 1px solid var(--contentL);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  color: var(--bodyC);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.standalone-page-container.dark-mode .ac-remove-btn {
+  border-color: #374151;
+  color: #9ca3af;
+}
+.ac-remove-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}

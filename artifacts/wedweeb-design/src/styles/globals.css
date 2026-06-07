@@ -1,0 +1,140 @@
+/* ===== إعادة تعيين أساسية ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Preloader Styles ===== */
+.pldW {
+  display: none;
+  direction: ltr;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--contentB);
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.8s ease;
+}
+.standalone-page-container.dark-mode .pldW {
+  background: var(--bodyB);
+}
+.pldW.e { display: flex; }
+.pldW.h { opacity: 0; visibility: hidden; }
+
+/* SVG Loader */
+.svg-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.svg-loader svg { width: 100%; height: 100%; }
+.svg-loader path {
+  stroke-width: 8;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+.svg-loader .part1 {
+  stroke: rgba(225, 20, 98, 0.9);
+  animation: draw 1s ease-in-out forwards, fill-part1 0.3s ease-in-out 1s forwards;
+}
+.svg-loader .part2 {
+  stroke: rgba(111, 202, 220, 0.9);
+  animation: draw 1s ease-in-out 0.25s forwards, fill-part2 0.3s ease-in-out 1.25s forwards;
+}
+.svg-loader .part3 {
+  stroke: rgba(61, 184, 143, 0.9);
+  animation: draw 1s ease-in-out 0.5s forwards, fill-part3 0.3s ease-in-out 1.5s forwards;
+}
+.svg-loader .part4 {
+  stroke: rgba(233, 169, 32, 0.9);
+  animation: draw 1s ease-in-out 0.75s forwards, fill-part4 0.3s ease-in-out 1.75s forwards;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fill-part1 { to { fill: rgba(225, 20, 98, 0.9); } }
+@keyframes fill-part2 { to { fill: rgba(111, 202, 220, 0.9); } }
+@keyframes fill-part3 { to { fill: rgba(61, 184, 143, 0.9); } }
+@keyframes fill-part4 { to { fill: rgba(233, 169, 32, 0.9); } }
+
+/* Background pulse effect */
+.pldW::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(225,20,98,.1) 0, rgba(111,202,220,.1) 50%, rgba(61,184,143,.1) 100%);
+  animation: pulse-bg 1.5s infinite ease-out;
+  z-index: -1;
+}
+@keyframes pulse-bg {
+  0% { transform: translate(-50%,-50%) scale(.8); opacity: .6; }
+  50% { background: radial-gradient(circle, rgba(233,169,32,.1) 0, rgba(225,20,98,.1) 50%, rgba(111,202,220,.1) 100%); }
+  70% { transform: translate(-50%,-50%) scale(1.2); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ===== بطاقة الترحيب ===== */
+.welcome-card {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 32px 28px;
+  background: var(--contentB);
+  border: 1px solid var(--contentL);
+  border-radius: 12px;
+  text-align: center;
+  direction: rtl;
+}
+.standalone-page-container.dark-mode .welcome-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+.welcome-card h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--bodyC);
+  letter-spacing: 0.01em;
+}
+.standalone-page-container.dark-mode .welcome-card h1 {
+  color: var(--white);
+}
+
+/* ===== صفحات الأدوات العامة ===== */
+.tool-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+  direction: rtl;
+}
+.tool-page h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--bodyC);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--contentL);
+}
+.standalone-page-container.dark-mode .tool-page h2 {
+  color: var(--white);
+  border-bottom-color: #374151;
+}
+.tool-page p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--bodyC);
+  opacity: 0.75;
+}
+.standalone-page-container.dark-mode .tool-page p {
+  color: var(--white);
+}

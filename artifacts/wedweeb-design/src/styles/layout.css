@@ -1,0 +1,338 @@
+/* ===== عزل المتغيرات ===== */
+.standalone-page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  direction: rtl;
+}
+.standalone-page-container.dark-mode {
+  background: var(--bodyB);
+}
+
+/* ===== أنماط الهيدر (بدون زجاج) ===== */
+.standalone-page-container .custom-header {
+  position: sticky;
+  top: 0;
+  background: var(--contentB);
+  z-index: 50;
+  border-bottom: 1px solid var(--contentL);
+  flex-shrink: 0;
+  width: 100%;
+}
+.standalone-page-container.dark-mode .custom-header {
+  background: var(--bodyB);
+  border-bottom-color: var(--contentL);
+}
+.standalone-page-container .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 20px;
+  min-height: 56px;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== رابط البراند (الشعار + النص) ===== */
+.standalone-page-container .header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.standalone-page-container .header-brand:hover {
+  opacity: 0.85;
+}
+
+/* صندوق الشعار */
+.standalone-page-container .logo-box {
+  background: var(--contentB);
+  border: 0.1px solid var(--contentL);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+.standalone-page-container.dark-mode .logo-box {
+  background: var(--bodyB);
+  border-color: var(--contentL);
+}
+.standalone-page-container .header-brand:hover .logo-box {
+  border-color: var(--linkC);
+}
+.standalone-page-container .logo-box svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scale(1.1);
+}
+.standalone-page-container .logo-box .logo-part1 { fill: rgba(225, 20, 98, 0.9); }
+.standalone-page-container .logo-box .logo-part2 { fill: rgba(111, 202, 220, 0.9); }
+.standalone-page-container .logo-box .logo-part3 { fill: rgba(61, 184, 143, 0.9); }
+.standalone-page-container .logo-box .logo-part4 { fill: rgba(233, 169, 32, 0.9); }
+
+/* نص اسم الموقع */
+.standalone-page-container .header-title-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--bodyC);
+  transition: color 0.2s;
+}
+.standalone-page-container.dark-mode .header-title-text {
+  color: var(--white);
+}
+.standalone-page-container .header-brand:hover .header-title-text {
+  color: var(--linkC);
+}
+
+/* أزرار الهيدر اليمنى */
+.standalone-page-container .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* زر أيقونة المستخدم — دائري مثل زر الثيم */
+.standalone-page-container .header-avatar-btn {
+  background: none;
+  border: 1px solid var(--contentL);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.standalone-page-container .header-avatar-btn:hover {
+  transform: scale(1.05);
+  border-color: var(--linkC);
+}
+.standalone-page-container .header-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* زر تسجيل الدخول — دائري مثل زر الثيم */
+.standalone-page-container .header-login-btn {
+  background: none;
+  border: 1px solid var(--contentL);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.standalone-page-container.dark-mode .header-login-btn {
+  border-color: var(--contentL);
+}
+.standalone-page-container .header-login-btn:hover {
+  transform: scale(1.05);
+  border-color: var(--linkC);
+}
+.standalone-page-container .header-login-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--bodyC);
+}
+.standalone-page-container.dark-mode .header-login-btn svg {
+  stroke: var(--white);
+}
+
+/* زر تبديل الوضع الليلي */
+.standalone-page-container .theme-toggle {
+  background: none;
+  border: 1px solid var(--contentL);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.standalone-page-container.dark-mode .theme-toggle {
+  border-color: var(--contentL);
+}
+.standalone-page-container .theme-toggle:hover {
+  transform: scale(1.05);
+  border-color: var(--linkC);
+}
+.standalone-page-container .theme-toggle svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: var(--bodyC);
+  stroke-width: 2;
+}
+.standalone-page-container.dark-mode .theme-toggle svg {
+  stroke: var(--white);
+}
+
+/* ===== أنماط المحتوى الرئيسي ===== */
+.standalone-page-container .content-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  width: 100%;
+}
+.standalone-page-container .tool-title {
+  color: var(--bodyC);
+  font-size: 18px;
+  margin: 0 0 20px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--contentL);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.standalone-page-container.dark-mode .tool-title {
+  color: var(--white);
+  border-bottom-color: var(--contentL);
+}
+.standalone-page-container #page-content-wrapper {
+  line-height: 1.8;
+  color: var(--bodyC);
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+  text-align: right;
+}
+.standalone-page-container.dark-mode #page-content-wrapper {
+  color: var(--notifC);
+}
+.standalone-page-container #page-content-wrapper img,
+.standalone-page-container #page-content-wrapper iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== أنماط الفوتر ===== */
+.standalone-page-container .custom-footer {
+  padding: 0px 0;
+  border-top: 1px solid var(--contentL);
+  flex-shrink: 0;
+  background: inherit;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+.standalone-page-container.dark-mode .custom-footer {
+  border-top-color: var(--contentL);
+}
+.standalone-page-container .footer-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .standalone-page-container .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.standalone-page-container .footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 9px;
+  color: var(--notifC);
+}
+.standalone-page-container.dark-mode .footer-info {
+  color: var(--notifC);
+}
+.standalone-page-container .footer-info a {
+  color: var(--bodyC);
+  text-decoration: none;
+}
+.standalone-page-container.dark-mode .footer-info a {
+  color: var(--white);
+}
+.standalone-page-container .footer-info a:hover {
+  text-decoration: underline;
+}
+.standalone-page-container .footer-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.standalone-page-container .footer-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--contentL);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.standalone-page-container.dark-mode .footer-links li a {
+  border-color: var(--contentL);
+}
+.standalone-page-container .footer-links li a:hover {
+  border-color: var(--linkC);
+  transform: translateY(-2px);
+}
+.standalone-page-container .footer-links li a svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: var(--notifC);
+  stroke-width: 2;
+}
+.standalone-page-container.dark-mode .footer-links li a svg {
+  stroke: var(--notifC);
+}
+.standalone-page-container .footer-links li a:hover svg {
+  stroke: var(--linkC);
+}
+
+/* تحسين للجوال */
+@media (max-width: 600px) {
+  .standalone-page-container .content-wrapper { padding: 15px; }
+  .standalone-page-container .tool-title { font-size: 16px; }
+  .standalone-page-container #page-content-wrapper { font-size: 14px; padding: 0 10px 10px; }
+  .standalone-page-container .custom-footer { padding: 7px 0; }
+}
