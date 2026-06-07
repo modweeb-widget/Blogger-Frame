@@ -1,22 +1,22 @@
-/* ===== متغيرات CSS الأساسية - WedweeB Design Framework ===== */
+/* ===== متغيرات CSS الأساسية - ModweeB Design Framework ===== */
 :root {
-  /* ألوان المحتوى */
-  --contentL: #e5e7eb;
-  --contentB: #ffffff;
+  /* ألوان المحتوى - أضف بادئة mwb- */
+  --mwb-contentL: #e5e7eb;
+  --mwb-contentB: #ffffff;
 
   /* ألوان الجسم */
-  --bodyB: #111827;
-  --bodyC: #111827;
+  --mwb-bodyB: #111827;
+  --mwb-bodyC: #111827;
 
   /* ألوان الروابط */
-  --headC: #111827;
-  --linkB: #000000;
-  --linkC: #3b82f6;
+  --mwb-headC: #111827;
+  --mwb-linkB: #000000;
+  --mwb-linkC: #3b82f6;
 
   /* ألوان عامة */
-  --white: #ffffff;
+  --mwb-white: #ffffff;
 
   /* ألوان الإشعارات */
-  --notifB: #1f2937;
-  --notifC: #6b7280;
+  --mwb-notifB: #1f2937;
+  --mwb-notifC: #6b7280;
 }
