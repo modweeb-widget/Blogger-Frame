@@ -1,22 +1,16 @@
-/* ===== متغيرات CSS الأساسية - WedweeB Design Framework ===== */
-#root {
-  /* ألوان المحتوى */
-  --contentL: #e5e7eb;
-  --contentB: #ffffff;
-
-  /* ألوان الجسم */
-  --bodyB: #111827;
-  --bodyC: #111827;
-
-  /* ألوان الروابط */
-  --headC: #111827;
-  --linkB: #000000;
-  --linkC: #3b82f6;
-
-  /* ألوان عامة */
-  --white: #ffffff;
-
-  /* ألوان الإشعارات */
-  --notifB: #1f2937;
-  --notifC: #6b7280;
+/* ===== متغيرات CSS الخاصة بتطبيق ModweeB فقط ===== */
+:root {
+  /* أضف بادئة modwee- لجميع المتغيرات */
+  --modwee-contentL: #e5e7eb;
+  --modwee-contentB: #ffffff;
+  --modwee-bodyB: #111827;
+  --modwee-bodyC: #111827;
+  --modwee-headC: #111827;
+  --modwee-linkB: #000000;
+  --modwee-linkC: #3b82f6;
+  --modwee-white: #ffffff;
+  --modwee-notifB: #1f2937;
+  --modwee-notifC: #6b7280;
 }
+
+/* وكذلك في باقي ملفات CSS، استخدم --modwee- بدلاً من -- */
