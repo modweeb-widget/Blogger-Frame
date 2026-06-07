@@ -1,6 +1,6 @@
 // src/App.jsx
 import { useEffect } from "react";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
+import { HashRouter, MemoryRouter } from "react-router-dom";
 import AppRouter from "./routes/Router";
 
 export default function App() {
@@ -14,6 +14,7 @@ export default function App() {
 
   const initialRoute = window.__INITIAL_ROUTE__;
 
+  // للتضمين في Blogger مع مسار مخصص
   if (initialRoute) {
     return (
       <div className="modweeb-app" data-modweeb="true">
@@ -24,11 +25,12 @@ export default function App() {
     );
   }
 
+  // لـ GitHub Pages - استخدم HashRouter (يعمل بدون خادم)
   return (
     <div className="modweeb-app" data-modweeb="true">
-      <BrowserRouter basename={import.meta.env.BASE_URL?.replace(/\/$/, "") || ""}>
+      <HashRouter>
         <AppRouter />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
