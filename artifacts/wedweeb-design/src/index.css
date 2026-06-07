@@ -1,2 +1,27 @@
 /* ملف CSS رئيسي - WedweeB Design Framework */
 /* الأنماط مُعرَّفة في ملفات styles/ المنفصلة */
+/* ===== عزل التطبيق عن قالب Blogger ===== */
+
+/* منع تداخل أي ستايل من Blogger */
+.modweeb-app,
+#root {
+  all: initial; /* يمنع وراثة أي ستايل */
+  display: block;
+  position: relative;
+}
+
+/* إعادة تعريف أساسية داخل نطاق التطبيق فقط */
+.modweeb-app {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.modweeb-app * {
+  box-sizing: border-box;
+}
+
+/* إصلاح أي مشاكل في التمرير */
+.modweeb-app {
+  overflow-x: hidden;
+}
