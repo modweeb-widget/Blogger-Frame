@@ -15,22 +15,22 @@
   direction: rtl;
 }
 .standalone-page-container.dark-mode {
-  background: var(--bodyB);
+  background: var(--mwb-bodyB);
 }
 
 /* ===== أنماط الهيدر (بدون زجاج) ===== */
 .standalone-page-container .custom-header {
   position: sticky;
   top: 0;
-  background: var(--contentB);
+  background: var(--mwb-contentB);
   z-index: 50;
-  border-bottom: 1px solid var(--contentL);
+  border-bottom: 1px solid var(--mwb-contentL);
   flex-shrink: 0;
   width: 100%;
 }
 .standalone-page-container.dark-mode .custom-header {
-  background: var(--bodyB);
-  border-bottom-color: var(--contentL);
+  background: var(--mwb-bodyB);
+  border-bottom-color: var(--mwb-contentL);
 }
 .standalone-page-container .header-container {
   display: flex;
@@ -58,8 +58,8 @@
 
 /* صندوق الشعار */
 .standalone-page-container .logo-box {
-  background: var(--contentB);
-  border: 0.1px solid var(--contentL);
+  background: var(--mwb-contentB);
+  border: 0.1px solid var(--mwb-contentL);
   border-radius: 8px;
   width: 36px;
   height: 36px;
@@ -71,11 +71,11 @@
   transition: border-color 0.2s;
 }
 .standalone-page-container.dark-mode .logo-box {
-  background: var(--bodyB);
-  border-color: var(--contentL);
+  background: var(--mwb-bodyB);
+  border-color: var(--mwb-contentL);
 }
 .standalone-page-container .header-brand:hover .logo-box {
-  border-color: var(--linkC);
+  border-color: var(--mwb-linkC);
 }
 .standalone-page-container .logo-box svg {
   width: 100%;
@@ -92,14 +92,14 @@
 .standalone-page-container .header-title-text {
   font-size: 18px;
   font-weight: 500;
-  color: var(--bodyC);
+  color: var(--mwb-bodyC);
   transition: color 0.2s;
 }
 .standalone-page-container.dark-mode .header-title-text {
-  color: var(--white);
+  color: var(--mwb-white);
 }
 .standalone-page-container .header-brand:hover .header-title-text {
-  color: var(--linkC);
+  color: var(--mwb-linkC);
 }
 
 /* أزرار الهيدر اليمنى */
@@ -112,7 +112,7 @@
 /* زر أيقونة المستخدم — دائري مثل زر الثيم */
 .standalone-page-container .header-avatar-btn {
   background: none;
-  border: 1px solid var(--contentL);
+  border: 1px solid var(--mwb-contentL);
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -127,7 +127,7 @@
 }
 .standalone-page-container .header-avatar-btn:hover {
   transform: scale(1.05);
-  border-color: var(--linkC);
+  border-color: var(--mwb-linkC);
 }
 .standalone-page-container .header-avatar-img {
   width: 100%;
@@ -139,7 +139,7 @@
 /* زر تسجيل الدخول — دائري مثل زر الثيم */
 .standalone-page-container .header-login-btn {
   background: none;
-  border: 1px solid var(--contentL);
+  border: 1px solid var(--mwb-contentL);
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -151,25 +151,25 @@
   flex-shrink: 0;
 }
 .standalone-page-container.dark-mode .header-login-btn {
-  border-color: var(--contentL);
+  border-color: var(--mwb-contentL);
 }
 .standalone-page-container .header-login-btn:hover {
   transform: scale(1.05);
-  border-color: var(--linkC);
+  border-color: var(--mwb-linkC);
 }
 .standalone-page-container .header-login-btn svg {
   width: 14px;
   height: 14px;
-  stroke: var(--bodyC);
+  stroke: var(--mwb-bodyC);
 }
 .standalone-page-container.dark-mode .header-login-btn svg {
-  stroke: var(--white);
+  stroke: var(--mwb-white);
 }
 
 /* زر تبديل الوضع الليلي */
 .standalone-page-container .theme-toggle {
   background: none;
-  border: 1px solid var(--contentL);
+  border: 1px solid var(--mwb-contentL);
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -180,21 +180,21 @@
   transition: all 0.2s;
 }
 .standalone-page-container.dark-mode .theme-toggle {
-  border-color: var(--contentL);
+  border-color: var(--mwb-contentL);
 }
 .standalone-page-container .theme-toggle:hover {
   transform: scale(1.05);
-  border-color: var(--linkC);
+  border-color: var(--mwb-linkC);
 }
 .standalone-page-container .theme-toggle svg {
   width: 14px;
   height: 14px;
   fill: none;
-  stroke: var(--bodyC);
+  stroke: var(--mwb-bodyC);
   stroke-width: 2;
 }
 .standalone-page-container.dark-mode .theme-toggle svg {
-  stroke: var(--white);
+  stroke: var(--mwb-white);
 }
 
 /* ===== أنماط المحتوى الرئيسي ===== */
@@ -206,24 +206,24 @@
   width: 100%;
 }
 .standalone-page-container .tool-title {
-  color: var(--bodyC);
+  color: var(--mwb-bodyC);
   font-size: 18px;
   margin: 0 0 20px;
   font-weight: 600;
   text-align: center;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--contentL);
+  border-bottom: 1px solid var(--mwb-contentL);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 .standalone-page-container.dark-mode .tool-title {
-  color: var(--white);
-  border-bottom-color: var(--contentL);
+  color: var(--mwb-white);
+  border-bottom-color: var(--mwb-contentL);
 }
 .standalone-page-container #page-content-wrapper {
   line-height: 1.8;
-  color: var(--bodyC);
+  color: var(--mwb-bodyC);
   font-size: 16px;
   max-width: 1200px;
   margin: 0 auto;
@@ -231,7 +231,7 @@
   text-align: right;
 }
 .standalone-page-container.dark-mode #page-content-wrapper {
-  color: var(--notifC);
+  color: var(--mwb-notifC);
 }
 .standalone-page-container #page-content-wrapper img,
 .standalone-page-container #page-content-wrapper iframe {
@@ -242,7 +242,7 @@
 /* ===== أنماط الفوتر ===== */
 .standalone-page-container .custom-footer {
   padding: 0px 0;
-  border-top: 1px solid var(--contentL);
+  border-top: 1px solid var(--mwb-contentL);
   flex-shrink: 0;
   background: inherit;
   width: 100%;
@@ -250,7 +250,7 @@
   bottom: 0;
 }
 .standalone-page-container.dark-mode .custom-footer {
-  border-top-color: var(--contentL);
+  border-top-color: var(--mwb-contentL);
 }
 .standalone-page-container .footer-container {
   max-width: 1024px;
@@ -276,17 +276,17 @@
   justify-content: center;
   gap: 3px;
   font-size: 9px;
-  color: var(--notifC);
+  color: var(--mwb-notifC);
 }
 .standalone-page-container.dark-mode .footer-info {
-  color: var(--notifC);
+  color: var(--mwb-notifC);
 }
 .standalone-page-container .footer-info a {
-  color: var(--bodyC);
+  color: var(--mwb-bodyC);
   text-decoration: none;
 }
 .standalone-page-container.dark-mode .footer-info a {
-  color: var(--white);
+  color: var(--mwb-white);
 }
 .standalone-page-container .footer-info a:hover {
   text-decoration: underline;
@@ -304,29 +304,29 @@
   justify-content: center;
   width: 25px;
   height: 25px;
-  border: 1px solid var(--contentL);
+  border: 1px solid var(--mwb-contentL);
   border-radius: 6px;
   transition: all 0.2s;
 }
 .standalone-page-container.dark-mode .footer-links li a {
-  border-color: var(--contentL);
+  border-color: var(--mwb-contentL);
 }
 .standalone-page-container .footer-links li a:hover {
-  border-color: var(--linkC);
+  border-color: var(--mwb-linkC);
   transform: translateY(-2px);
 }
 .standalone-page-container .footer-links li a svg {
   width: 14px;
   height: 14px;
   fill: none;
-  stroke: var(--notifC);
+  stroke: var(--mwb-notifC);
   stroke-width: 2;
 }
 .standalone-page-container.dark-mode .footer-links li a svg {
-  stroke: var(--notifC);
+  stroke: var(--mwb-notifC);
 }
 .standalone-page-container .footer-links li a:hover svg {
-  stroke: var(--linkC);
+  stroke: var(--mwb-linkC);
 }
 
 /* تحسين للجوال */
